@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;color: forestgreen;
+}
+
+a {
+  color: #00B7FF;
+}
+
+th {
+  background-color: whitesmoke;
+  padding: 1em;
+  text-align: left;
+  border: 1px solid purple;
+  padding: 1em;
+  }
+  td {
+  border: 1px solid purple;
+  width: 200px;
+  padding: 1em;
+  }
+  

@@ -1,0 +1,9 @@
+extends ../layout 
+
+block content
+    h1 Lead Edit
+    form(action="/lead/" + lead.id + "/edit", method = "POST")
+        input(name="lead_id", type="id", placeholder="Enter your ID", value = lead.id)
+        input(name="lead_name", type="name", placeholder="Enter your First name", value = lead.name)
+        input(name="lead_email", type="email", placeholder="Enter your Email", value = lead.email)
+        button(type="submit") Save

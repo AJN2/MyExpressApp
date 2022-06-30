@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1 Lead Display
+    table
+        tr
+            td
+                <span> #{lead.id}</span>
+            td
+                <span> #{lead.email}</span>
+            td
+                <span> #{lead.name}</span>
+            td
+                a(href="/lead/" + lead.id + "/edit" ) Edit
+                <br>
+                <br>
+                
+                form(action="/lead/" + lead.id +"/delete", method="POST")
+                    button(type="submit") Delete 
