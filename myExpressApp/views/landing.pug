@@ -1,9 +1,20 @@
-extends layout
-block content 
+doctype html
+html(lang='en')
+  include common/head.pug
+  +head("MyNodeJS")
+  body
+    header
+      include common/navbar.pug
+      +navbar(user)
+      .container
+        .row.align-items-center
+          .col-md-6.order-md-1.text-center.text-md-left.pr-md-5
+            h1.mb-3 Minimum Viable Landing Page
+            p.lead This tutorial teaches you how to build a NodeJS web application covering key topics.
+            p.lead.mb-4 Learn how to launch a landing page and start collecting sales leads.
   h1= title
   p Welcome to Askiaa/ Jingxi's #{title} webpage
   form(action="/", method = "POST")
-    input(name="lead_id", type="name", placeholder="Enter your ID")
     input(name="lead_name", type="name", placeholder="Enter your First name")
     input(name="lead_email", type="email", placeholder="Enter your Email")
     button(type="submit") Submit me
@@ -21,6 +32,7 @@ block content
             br
             br
             button(onclick=`deleteLead('${lead.id}')`) Delete
-
+    include common/footer.pug
+    +footer()              
     script(src='/javascripts/leads.js')
-              
+    

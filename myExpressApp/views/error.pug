@@ -1,5 +1,8 @@
-extends layout
-
+doctype html
+html(lang='en')
+  include common/head.pug
+  +head("MyNodeJS")
+  
 block content
   h1= message
   h2= error.status

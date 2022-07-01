@@ -1,16 +1,17 @@
 const models = require('../models')
+var uuid = require('uuid');
 
 exports.get_landing = (req, res, next) =>
     res.render('landing', { title: 'Express from Askiaa & Jingxi with Controllers' });
 
-    exports.submit_lead = (req, res, next) => {
-return models.Lead.create({
-email:req.body.lead_email,
-name:req.body.lead_name,
-id:req.body.lead_id
-}).then(lead => {
-res.redirect('/leads');
-})
+exports.submit_lead = (req, res, next) => {
+    return models.Lead.create({
+        email:req.body.lead_email,
+        name:req.body.lead_name,
+        id:uuid.v4()
+    }).then(lead => {
+        res.redirect('/leads');
+    })
 }
 
 exports.show_leads = (req, res, next) => {

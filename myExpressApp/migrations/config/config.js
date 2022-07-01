@@ -1,12 +1,12 @@
 module.exports = {
   "development": {
-  "username": "MyNodeJSUser",
-  "password": "a",//your password here
-  "database": "MyNodeDB",
-  "host": "127.0.0.1",
-  "dialect": "postgres",
-  "port": 5432
-  },
+    "username": "MyNodeJSUser",
+    "password": "MyNodeDBPassword",//your password here
+    "database": "MyNodeJSUser",
+    "host": "103.145.60.31",
+    "dialect": "postgres",
+    "port": 5432
+    },
   "test": {
   "username": "root",
   "password": null,
